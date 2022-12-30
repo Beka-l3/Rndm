@@ -3,7 +3,7 @@
 ## Elevator pitch 
 
 **For** everyone  
-**Who** wants loves random facts  
+**Who** loves random facts  
 **The product** Rndm  
 **Is** just made for you  
 **Which** gives you a random facts using open free APIs  
