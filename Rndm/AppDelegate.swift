@@ -7,22 +7,31 @@
 
 import UIKit
 
+protocol AppDelegateCommand {
+    func startTheSession()
+}
+
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let onboardingPage = OnboardingPage()
+        let nc = UINavigationController(rootViewController: onboardingPage)
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        
-        let nc = UINavigationController(rootViewController: ViewController())
         window?.rootViewController = nc
         window?.makeKeyAndVisible()
         
+        let appCoordinator = AppCoordinator(onboardingPage: onboardingPage)
+        appCoordinator.startTheSession()
+        
         return true
     }
-
+    
+    
 
 }
 
