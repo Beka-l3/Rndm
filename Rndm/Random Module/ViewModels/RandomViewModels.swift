@@ -25,25 +25,24 @@ class RViewModels: Colors {
         c.backgroundColor = clearBlack
         c.register(CardCell.self, forCellWithReuseIdentifier: CardCell.identifier)
         c.register(RHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: RHeaderView.identifier)
-        
-        let refreshControl = UIRefreshControl()
-        c.addSubview(refreshControl)
-        
         c.translatesAutoresizingMaskIntoConstraints = false
         return c
     }()
     
-    private lazy var backgroundImage: UIImageView = {
+    lazy var backgroundImage: UIImageView = {
         let v = UIImageView()
         v.image = GConstants.backgroundImage
-        
+        v.contentMode = .scaleAspectFill
         v.translatesAutoresizingMaskIntoConstraints = false
         return v
     }()
     
+    
+//  MARK: - func
     func setupViews(parent: UIView) {
-        parent.addSubview(backgroundImage)
         parent.addSubview(collectionView)
+        parent.addSubview(backgroundImage)
+        backgroundImage.layer.zPosition = -10
         
         NSLayoutConstraint.activate([
             backgroundImage.topAnchor.constraint(equalTo: parent.topAnchor),
@@ -52,8 +51,8 @@ class RViewModels: Colors {
             backgroundImage.bottomAnchor.constraint(equalTo: parent.bottomAnchor),
             
             collectionView.topAnchor.constraint(equalTo: parent.topAnchor),
-            collectionView.leadingAnchor.constraint(equalTo: parent.safeAreaLayoutGuide.leadingAnchor),
-            collectionView.trailingAnchor.constraint(equalTo: parent.safeAreaLayoutGuide.trailingAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: parent.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: parent.trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: parent.bottomAnchor),
         ])
     }

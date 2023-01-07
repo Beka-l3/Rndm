@@ -10,7 +10,6 @@ import UIKit
 class OnboardingPage: UIViewController, Colors {
     
     
-    
     override func viewDidLoad() { super.viewDidLoad()
         view.backgroundColor = dominant
     }

@@ -20,6 +20,7 @@ extension RViewController: UICollectionViewDelegateFlowLayout, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = rViewModels.collectionView.dequeueReusableCell(withReuseIdentifier: CardCell.identifier, for: indexPath) as! CardCell
         cell.setDesign(indexPath: indexPath)
+        cell.setTitlesAndDescriptions(indexPath: indexPath)
         
         return cell
     }
@@ -33,7 +34,7 @@ extension RViewController: UICollectionViewDelegateFlowLayout, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: RHeaderView.identifier, for: indexPath) as! RHeaderView
 //        let sectionHeader = RHeaderView()
-        sectionHeader.sectionHeaderlabel.text = RConstanst.sectionTitles[indexPath.section]
+        sectionHeader.sectionHeaderlabel.text = RCardTitles.sectionTitles[indexPath.section]
         
         return sectionHeader
     }

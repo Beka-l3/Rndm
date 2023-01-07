@@ -51,8 +51,13 @@ protocol Glassmorphism {
     var semiFullOpacity: Float {get}
     var fullOpacity: Float {get}
     
+    var cardTitleOacity: Float {get}
+    
     var borderWidth: CGFloat {get}
     var cornerRadius: CGFloat {get}
+    
+    var cardTextShadowOffset: CGSize {get}
+    var cardTextShadowRadius: CGFloat {get}
 }
 
 extension Glassmorphism {
@@ -62,15 +67,31 @@ extension Glassmorphism {
     var semiOpacity: Float {0.5}
     var semiFullOpacity: Float { 0.8 }
     var fullOpacity: Float { 1.0 }
+    var cardTitleOacity: Float {0.6}
     
     var borderWidth: CGFloat {2.0}
     var cornerRadius: CGFloat {20}
+    
+    var cardTextShadowOffset: CGSize {CGSize(width: 3, height: 3)}
+    var cardTextShadowRadius: CGFloat {3.0}
 }
 
 protocol Fonts {
     var petitHeaderFont: UIFont? {get}
+    var largeTitleFont: UIFont? {get}
+    var cardTextFont: UIFont? {get}
+    var cardMediumTextFont: UIFont? {get}
+    var cardLargeTextFont: UIFont? {get}
+    var cardTitleFont: UIFont? {get}
+    var cardDescriptionFont: UIFont? {get}
 }
 
 extension Fonts {
     var petitHeaderFont: UIFont? {UIFont(name: "Poppins-Bold", size: 11)}
+    var largeTitleFont: UIFont? {UIFont(name: "Poppins-Bold", size: 24)}
+    var cardTextFont: UIFont? {UIFont(name: "Poppins-Medium", size: 15)}
+    var cardMediumTextFont: UIFont? {UIFont(name: "Poppins-Medium", size: 32)}
+    var cardLargeTextFont: UIFont? {UIFont(name: "Poppins-Medium", size: 64)}
+    var cardTitleFont: UIFont? {UIFont(name: "Poppins-Bold", size: 15)}
+    var cardDescriptionFont: UIFont? {UIFont(name: "Poppins-Medium", size: 9)}
 }

@@ -19,6 +19,7 @@ final class AppCoordinator: Colors, Glassmorphism {
     private var mPageBuilder: ModuleBuilder
     
     
+//  MARK: - init
     init(onboardingPage op: OnboardingPage) {
         self.onboardingPage = op
         self.tabbarController = UITabBarController()
@@ -27,12 +28,12 @@ final class AppCoordinator: Colors, Glassmorphism {
         self.dPageBuilder = RModuleBuilder()
         self.mPageBuilder = RModuleBuilder()
         
-        self.tabbarController.setViewControllers([
+        self.tabbarController.viewControllers = [
             rPageBuilder.viewController,
             nPageBuilder.viewController,
             dPageBuilder.viewController,
             mPageBuilder.viewController
-        ], animated: true)
+        ]
         
         rPageBuilder.appCoordinator = self
         nPageBuilder.appCoordinator = self
@@ -41,7 +42,9 @@ final class AppCoordinator: Colors, Glassmorphism {
         
         setTabbarDesign()
     }
+
     
+//  MARK: - func
     private func pushTabbar() {
         self.onboardingPage.navigationController?.pushViewController(tabbarController, animated: true)
     }
@@ -55,24 +58,22 @@ final class AppCoordinator: Colors, Glassmorphism {
         blurEffectView.clipsToBounds = true
         blurEffectView.layer.opacity = fullOpacity
         blurEffectView.layer.compositingFilter = overlayBlendMode
-        
+
         self.tabbarController.tabBar.addSubview(blurEffectView)
         self.tabbarController.tabBar.backgroundColor = semiClearBlack
         self.tabbarController.tabBar.layer.cornerRadius = GConstants.largePadding
         
+        self.tabbarController.tabBar.tintColor = accent
+        self.tabbarController.tabBar.unselectedItemTintColor = semiWhite
         rPageBuilder.viewController.tabBarItem = UITabBarItem.init(title: GConstants.rTitle, image: GConstants.rImage, selectedImage: GConstants.rSelectedImage)
         nPageBuilder.viewController.tabBarItem = UITabBarItem.init(title: GConstants.nTitle, image: GConstants.nImage, selectedImage: GConstants.nSelectedImage)
         dPageBuilder.viewController.tabBarItem = UITabBarItem.init(title: GConstants.dTitle, image: GConstants.dImage, selectedImage: GConstants.dSelectedImage)
         mPageBuilder.viewController.tabBarItem = UITabBarItem.init(title: GConstants.mTitle, image: GConstants.mImage, selectedImage: GConstants.mSelectedImage)
-        
-        for item in tabbarController.tabBar.items! {
-            item.setTitleTextAttributes([.foregroundColor: accent], for: .selected)
-            item.setTitleTextAttributes([.foregroundColor: semiWhite], for: .normal)
-        }
     }
 }
 
 
+//  MARK: - extensions
 extension AppCoordinator: AppDelegateCommand {
     func startTheSession() {
         self.pushTabbar()

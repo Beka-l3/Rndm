@@ -38,5 +38,6 @@ enum GConstants {
     static let mediumCardHeight: CGFloat = 240.0
     static let mediumCardWidth: CGFloat = UIScreen.main.bounds.width / 2 - 2 * GConstants.mediumPadding //- GConstants.smallPadding
     
+    static let petitCornerRadius: CGFloat = 12.0
     static let mediumCornerRadius: CGFloat = 20.0
 }
