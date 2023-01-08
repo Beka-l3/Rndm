@@ -11,11 +11,13 @@ import UIKit
 class RViewController: UIViewController, Colors, Fonts {
     
     internal let rViewModels: RViewModels
+    internal var sectionStack: [Int]
     
     
 //  MARK: - lifecycle
     init() {
         self.rViewModels = RViewModels()
+        self.sectionStack = []
         super.init(nibName: nil, bundle: nil)
     }
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
@@ -38,19 +40,36 @@ class RViewController: UIViewController, Colors, Fonts {
     }
     
     private func setupNavStyle() {
-        self.tabBarController?.navigationItem.title = "Suka"
+        self.tabBarController?.navigationItem.title = "Title"
         self.tabBarController?.navigationItem.hidesBackButton = true
         self.tabBarController?.navigationController?.isNavigationBarHidden = false
         self.tabBarController?.navigationController?.navigationBar.prefersLargeTitles = true
         self.tabBarController?.navigationController?.navigationBar.tintColor = accent
         
-        self.tabBarController?.navigationController?.navigationBar.largeTitleTextAttributes = [
+        let blurEffect = UIBlurEffect(style: .systemUltraThinMaterialDark)
+        let largeTitleAttr = [
             NSAttributedString.Key.foregroundColor: white,
-            NSAttributedString.Key.font: largeTitleFont ?? .boldSystemFont(ofSize: 24)
+            NSAttributedString.Key.font: largeTitleFont!
         ]
-        self.tabBarController?.navigationController?.navigationBar.titleTextAttributes = [
+        let titleAttr = [
             NSAttributedString.Key.foregroundColor: white,
+            NSAttributedString.Key.font: titleFont!
         ]
+        
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundEffect = blurEffect
+        appearance.backgroundColor = semiBlack
+        appearance.largeTitleTextAttributes = largeTitleAttr
+        appearance.titleTextAttributes = titleAttr
+        
+        let largeAppearance = UINavigationBarAppearance()
+        largeAppearance.backgroundEffect = nil
+        largeAppearance.backgroundColor = .clear
+        largeAppearance.shadowColor = .clear
+        largeAppearance.largeTitleTextAttributes = largeTitleAttr
+        largeAppearance.titleTextAttributes = titleAttr
+        
+        self.tabBarController?.navigationController?.navigationBar.standardAppearance = appearance
+        self.tabBarController?.navigationController?.navigationBar.scrollEdgeAppearance = largeAppearance
     }
-    
 }

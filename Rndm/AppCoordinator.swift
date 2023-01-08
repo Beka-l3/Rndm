@@ -8,7 +8,7 @@
 import UIKit
 
 
-final class AppCoordinator: Colors, Glassmorphism {
+final class AppCoordinator: Colors, Glassmorphism, Fonts {
     
     private let onboardingPage: OnboardingPage
     private let tabbarController: UITabBarController
@@ -51,6 +51,11 @@ final class AppCoordinator: Colors, Glassmorphism {
     
     private func setTabbarDesign() {
         let blurEffect = UIBlurEffect(style: .systemUltraThinMaterialDark)
+        
+        let tabbarAppearance = UITabBarAppearance()
+        tabbarAppearance.backgroundColor = semiBlack
+        tabbarAppearance.backgroundEffect = nil
+        
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = self.tabbarController.tabBar.bounds
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -58,9 +63,11 @@ final class AppCoordinator: Colors, Glassmorphism {
         blurEffectView.clipsToBounds = true
         blurEffectView.layer.opacity = fullOpacity
         blurEffectView.layer.compositingFilter = overlayBlendMode
-
+        
+        self.tabbarController.tabBar.clipsToBounds = true
         self.tabbarController.tabBar.addSubview(blurEffectView)
-        self.tabbarController.tabBar.backgroundColor = semiClearBlack
+        self.tabbarController.tabBar.standardAppearance = tabbarAppearance
+        self.tabbarController.tabBar.scrollEdgeAppearance = tabbarAppearance
         self.tabbarController.tabBar.layer.cornerRadius = GConstants.largePadding
         
         self.tabbarController.tabBar.tintColor = accent

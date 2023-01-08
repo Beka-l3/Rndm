@@ -31,6 +31,4 @@ class RHeaderView: UICollectionReusableView, Colors, Fonts {
         ])
     }
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
-    
-    
 }

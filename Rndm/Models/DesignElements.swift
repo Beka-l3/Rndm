@@ -78,7 +78,9 @@ extension Glassmorphism {
 
 protocol Fonts {
     var petitHeaderFont: UIFont? {get}
+    var titleFont: UIFont? {get}
     var largeTitleFont: UIFont? {get}
+    
     var cardTextFont: UIFont? {get}
     var cardMediumTextFont: UIFont? {get}
     var cardLargeTextFont: UIFont? {get}
@@ -88,6 +90,7 @@ protocol Fonts {
 
 extension Fonts {
     var petitHeaderFont: UIFont? {UIFont(name: "Poppins-Bold", size: 11)}
+    var titleFont: UIFont? {UIFont(name: "Poppins-Bold", size: 16)}
     var largeTitleFont: UIFont? {UIFont(name: "Poppins-Bold", size: 24)}
     var cardTextFont: UIFont? {UIFont(name: "Poppins-Medium", size: 15)}
     var cardMediumTextFont: UIFont? {UIFont(name: "Poppins-Medium", size: 32)}

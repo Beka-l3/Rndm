@@ -33,13 +33,30 @@ extension RViewController: UICollectionViewDelegateFlowLayout, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: RHeaderView.identifier, for: indexPath) as! RHeaderView
-//        let sectionHeader = RHeaderView()
         sectionHeader.sectionHeaderlabel.text = RCardTitles.sectionTitles[indexPath.section]
+        if indexPath.section == 0 { sectionHeader.sectionHeaderlabel.isHidden = true }
         
         return sectionHeader
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 60)
+        return CGSize(width: collectionView.frame.width, height: section == 0 ? 0.1 :  60)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplaySupplementaryView view: UICollectionReusableView, forElementKind elementKind: String, at indexPath: IndexPath) {
+        if let section = sectionStack.last, section > indexPath.section {
+            sectionStack.insert(indexPath.section, at: 0)
+        } else {
+            sectionStack.append(indexPath.section)
+        }
+        
+        self.tabBarController?.navigationItem.title = RCardTitles.sectionTitles[sectionStack.first ?? 0]
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didEndDisplayingSupplementaryView view: UICollectionReusableView, forElementOfKind elementKind: String, at indexPath: IndexPath) {
+        if let id = sectionStack.firstIndex(of: indexPath.section) {
+            sectionStack.remove(at: id)
+        }
+        self.tabBarController?.navigationItem.title = RCardTitles.sectionTitles[sectionStack.first ?? RCardTitles.sectionTitles.count - 1]
     }
 }
