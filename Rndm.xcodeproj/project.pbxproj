@@ -15,6 +15,24 @@
 		0755042D295CA8EA006D1977 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0755042B295CA8EA006D1977 /* Main.storyboard */; };
 		0755042F295CA8EF006D1977 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0755042E295CA8EF006D1977 /* Assets.xcassets */; };
 		07550432295CA8EF006D1977 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07550430295CA8EF006D1977 /* LaunchScreen.storyboard */; };
+		07C0939129B63E2B0081CFB0 /* CardModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C0939029B63E2B0081CFB0 /* CardModels.swift */; };
+		07C0939A29B64E510081CFB0 /* NetworkClientImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C0939329B64E510081CFB0 /* NetworkClientImplementation.swift */; };
+		07C0939B29B64E510081CFB0 /* NrtworkClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C0939429B64E510081CFB0 /* NrtworkClientProtocol.swift */; };
+		07C0939C29B64E510081CFB0 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C0939629B64E510081CFB0 /* HTTPRequest.swift */; };
+		07C0939D29B64E510081CFB0 /* HTTPNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C0939729B64E510081CFB0 /* HTTPNetworkResponse.swift */; };
+		07C0939E29B64E510081CFB0 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C0939829B64E510081CFB0 /* HTTPMethod.swift */; };
+		07C0939F29B64E510081CFB0 /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C0939929B64E510081CFB0 /* HTTPError.swift */; };
+		07C093AC29B6518D0081CFB0 /* NetworkServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C093A129B6518D0081CFB0 /* NetworkServiceImplementation.swift */; };
+		07C093AD29B6518D0081CFB0 /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C093A229B6518D0081CFB0 /* NetworkServiceProtocol.swift */; };
+		07C093B729B651EF0081CFB0 /* AboutCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C093B629B651EF0081CFB0 /* AboutCat.swift */; };
+		07C093B929B652980081CFB0 /* NASA APOD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C093B829B652980081CFB0 /* NASA APOD.swift */; };
+		07C093BB29B653450081CFB0 /* RandomDogPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C093BA29B653450081CFB0 /* RandomDogPicture.swift */; };
+		07C093BD29B653E50081CFB0 /* RandomNumberTrivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C093BC29B653E50081CFB0 /* RandomNumberTrivia.swift */; };
+		07C093BF29B654470081CFB0 /* ActivitySuggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C093BE29B654470081CFB0 /* ActivitySuggestion.swift */; };
+		07C093C129B654A80081CFB0 /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C093C029B654A80081CFB0 /* Joke.swift */; };
+		07C093C329B655170081CFB0 /* RandomUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C093C229B655170081CFB0 /* RandomUser.swift */; };
+		07C093C529B655DC0081CFB0 /* RickAndMorty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C093C429B655DC0081CFB0 /* RickAndMorty.swift */; };
+		07C093C729B65E080081CFB0 /* SVGMonster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C093C629B65E080081CFB0 /* SVGMonster.swift */; };
 		07DB7CB12967464E00F7E07F /* RandomModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DB7CB02967464E00F7E07F /* RandomModuleBuilder.swift */; };
 		07DB7CB4296746EF00F7E07F /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DB7CB3296746EF00F7E07F /* RandomViewController.swift */; };
 		07DB7CB62967473C00F7E07F /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DB7CB52967473C00F7E07F /* GlobalConstants.swift */; };
@@ -44,6 +62,7 @@
 		07DB7CEC2967D68900F7E07F /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07DB7CD92967D68900F7E07F /* Poppins-SemiBold.ttf */; };
 		07DB7CED2967D68900F7E07F /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07DB7CDA2967D68900F7E07F /* Poppins-Italic.ttf */; };
 		07DB7CEE2967D68900F7E07F /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07DB7CDB2967D68900F7E07F /* Poppins-MediumItalic.ttf */; };
+		8A1BF43DBDAC3E0C4D6D119E /* Pods_Rndm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F444DFF3307343FBFF6975E1 /* Pods_Rndm.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +76,24 @@
 		0755042E295CA8EF006D1977 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07550431295CA8EF006D1977 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07550433295CA8EF006D1977 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07C0939029B63E2B0081CFB0 /* CardModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModels.swift; sourceTree = "<group>"; };
+		07C0939329B64E510081CFB0 /* NetworkClientImplementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClientImplementation.swift; sourceTree = "<group>"; };
+		07C0939429B64E510081CFB0 /* NrtworkClientProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NrtworkClientProtocol.swift; sourceTree = "<group>"; };
+		07C0939629B64E510081CFB0 /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
+		07C0939729B64E510081CFB0 /* HTTPNetworkResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPNetworkResponse.swift; sourceTree = "<group>"; };
+		07C0939829B64E510081CFB0 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		07C0939929B64E510081CFB0 /* HTTPError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
+		07C093A129B6518D0081CFB0 /* NetworkServiceImplementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServiceImplementation.swift; sourceTree = "<group>"; };
+		07C093A229B6518D0081CFB0 /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
+		07C093B629B651EF0081CFB0 /* AboutCat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCat.swift; sourceTree = "<group>"; };
+		07C093B829B652980081CFB0 /* NASA APOD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NASA APOD.swift"; sourceTree = "<group>"; };
+		07C093BA29B653450081CFB0 /* RandomDogPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomDogPicture.swift; sourceTree = "<group>"; };
+		07C093BC29B653E50081CFB0 /* RandomNumberTrivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumberTrivia.swift; sourceTree = "<group>"; };
+		07C093BE29B654470081CFB0 /* ActivitySuggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySuggestion.swift; sourceTree = "<group>"; };
+		07C093C029B654A80081CFB0 /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
+		07C093C229B655170081CFB0 /* RandomUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUser.swift; sourceTree = "<group>"; };
+		07C093C429B655DC0081CFB0 /* RickAndMorty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMorty.swift; sourceTree = "<group>"; };
+		07C093C629B65E080081CFB0 /* SVGMonster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGMonster.swift; sourceTree = "<group>"; };
 		07DB7CB02967464E00F7E07F /* RandomModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomModuleBuilder.swift; sourceTree = "<group>"; };
 		07DB7CB3296746EF00F7E07F /* RandomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewController.swift; sourceTree = "<group>"; };
 		07DB7CB52967473C00F7E07F /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
@@ -86,6 +123,9 @@
 		07DB7CD92967D68900F7E07F /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		07DB7CDA2967D68900F7E07F /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
 		07DB7CDB2967D68900F7E07F /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
+		121EC875F7DDA9490958CEAD /* Pods-Rndm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rndm.release.xcconfig"; path = "Target Support Files/Pods-Rndm/Pods-Rndm.release.xcconfig"; sourceTree = "<group>"; };
+		90E5838ECD8C03D0E6756634 /* Pods-Rndm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rndm.debug.xcconfig"; path = "Target Support Files/Pods-Rndm/Pods-Rndm.debug.xcconfig"; sourceTree = "<group>"; };
+		F444DFF3307343FBFF6975E1 /* Pods_Rndm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rndm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A1BF43DBDAC3E0C4D6D119E /* Pods_Rndm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +147,7 @@
 				07DB7CB52967473C00F7E07F /* GlobalConstants.swift */,
 				07DB7CC12967676300F7E07F /* ModuleBuilder.swift */,
 				07DB7CC52967D18C00F7E07F /* ExtensionsUIKit.swift */,
+				07C0939029B63E2B0081CFB0 /* CardModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -115,6 +157,8 @@
 			children = (
 				07550424295CA8EA006D1977 /* Rndm */,
 				07550423295CA8EA006D1977 /* Products */,
+				EA96E065E85470AFBF3E7606 /* Pods */,
+				3F9F45134A17EC6C766C80AA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,6 +173,8 @@
 		07550424295CA8EA006D1977 /* Rndm */ = {
 			isa = PBXGroup;
 			children = (
+				07C093A029B6518D0081CFB0 /* Service */,
+				07C0939229B64E510081CFB0 /* Network */,
 				07550425295CA8EA006D1977 /* AppDelegate.swift */,
 				070CCED0296641420070E588 /* OnboardingPage.swift */,
 				070CCECE296640BC0070E588 /* AppCoordinator.swift */,
@@ -145,6 +191,53 @@
 				07550433295CA8EF006D1977 /* Info.plist */,
 			);
 			path = Rndm;
+			sourceTree = "<group>";
+		};
+		07C0939229B64E510081CFB0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				07C0939329B64E510081CFB0 /* NetworkClientImplementation.swift */,
+				07C0939429B64E510081CFB0 /* NrtworkClientProtocol.swift */,
+				07C0939529B64E510081CFB0 /* Model */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		07C0939529B64E510081CFB0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				07C0939629B64E510081CFB0 /* HTTPRequest.swift */,
+				07C0939729B64E510081CFB0 /* HTTPNetworkResponse.swift */,
+				07C0939829B64E510081CFB0 /* HTTPMethod.swift */,
+				07C0939929B64E510081CFB0 /* HTTPError.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		07C093A029B6518D0081CFB0 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				07C093A129B6518D0081CFB0 /* NetworkServiceImplementation.swift */,
+				07C093A229B6518D0081CFB0 /* NetworkServiceProtocol.swift */,
+				07C093A429B6518D0081CFB0 /* Model */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		07C093A429B6518D0081CFB0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				07C093B829B652980081CFB0 /* NASA APOD.swift */,
+				07C093B629B651EF0081CFB0 /* AboutCat.swift */,
+				07C093BA29B653450081CFB0 /* RandomDogPicture.swift */,
+				07C093BC29B653E50081CFB0 /* RandomNumberTrivia.swift */,
+				07C093BE29B654470081CFB0 /* ActivitySuggestion.swift */,
+				07C093C029B654A80081CFB0 /* Joke.swift */,
+				07C093C229B655170081CFB0 /* RandomUser.swift */,
+				07C093C429B655DC0081CFB0 /* RickAndMorty.swift */,
+				07C093C629B65E080081CFB0 /* SVGMonster.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		07DB7CAB296742EF00F7E07F /* Random Module */ = {
@@ -256,6 +349,24 @@
 			path = "View Models";
 			sourceTree = "<group>";
 		};
+		3F9F45134A17EC6C766C80AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F444DFF3307343FBFF6975E1 /* Pods_Rndm.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA96E065E85470AFBF3E7606 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				90E5838ECD8C03D0E6756634 /* Pods-Rndm.debug.xcconfig */,
+				121EC875F7DDA9490958CEAD /* Pods-Rndm.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -263,9 +374,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07550436295CA8EF006D1977 /* Build configuration list for PBXNativeTarget "Rndm" */;
 			buildPhases = (
+				A9EB15F55D250276896CA571 /* [CP] Check Pods Manifest.lock */,
 				0755041E295CA8EA006D1977 /* Sources */,
 				0755041F295CA8EA006D1977 /* Frameworks */,
 				07550420295CA8EA006D1977 /* Resources */,
+				1A495BBC36C5691C7C2ADDC9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -341,6 +454,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1A495BBC36C5691C7C2ADDC9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Rndm/Pods-Rndm-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Rndm/Pods-Rndm-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Rndm/Pods-Rndm-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9EB15F55D250276896CA571 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rndm-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0755041E295CA8EA006D1977 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -348,17 +503,35 @@
 			files = (
 				07DB7CB12967464E00F7E07F /* RandomModuleBuilder.swift in Sources */,
 				07DB7CC22967676300F7E07F /* ModuleBuilder.swift in Sources */,
+				07C093BF29B654470081CFB0 /* ActivitySuggestion.swift in Sources */,
+				07C0939E29B64E510081CFB0 /* HTTPMethod.swift in Sources */,
+				07C093C529B655DC0081CFB0 /* RickAndMorty.swift in Sources */,
 				070CCECF296640BC0070E588 /* AppCoordinator.swift in Sources */,
 				0755042A295CA8EA006D1977 /* ViewController.swift in Sources */,
 				07DB7CBC29674E9900F7E07F /* ExtensionRViewController.swift in Sources */,
+				07C093B729B651EF0081CFB0 /* AboutCat.swift in Sources */,
+				07C093BD29B653E50081CFB0 /* RandomNumberTrivia.swift in Sources */,
 				07DB7CC62967D18C00F7E07F /* ExtensionsUIKit.swift in Sources */,
+				07C093C329B655170081CFB0 /* RandomUser.swift in Sources */,
 				07DB7CB4296746EF00F7E07F /* RandomViewController.swift in Sources */,
 				07DB7CB929674D2800F7E07F /* RandomViewModels.swift in Sources */,
+				07C0939A29B64E510081CFB0 /* NetworkClientImplementation.swift in Sources */,
+				07C093B929B652980081CFB0 /* NASA APOD.swift in Sources */,
+				07C093BB29B653450081CFB0 /* RandomDogPicture.swift in Sources */,
+				07C0939D29B64E510081CFB0 /* HTTPNetworkResponse.swift in Sources */,
 				07550426295CA8EA006D1977 /* AppDelegate.swift in Sources */,
+				07C0939F29B64E510081CFB0 /* HTTPError.swift in Sources */,
+				07C0939B29B64E510081CFB0 /* NrtworkClientProtocol.swift in Sources */,
+				07C0939129B63E2B0081CFB0 /* CardModels.swift in Sources */,
 				07DB7CC02967649200F7E07F /* CardCell.swift in Sources */,
 				07DB7CBE29674EF800F7E07F /* RandomConstants.swift in Sources */,
+				07C093AC29B6518D0081CFB0 /* NetworkServiceImplementation.swift in Sources */,
+				07C093C729B65E080081CFB0 /* SVGMonster.swift in Sources */,
 				070CCED4296649DA0070E588 /* DesignElements.swift in Sources */,
 				07DB7CB62967473C00F7E07F /* GlobalConstants.swift in Sources */,
+				07C093AD29B6518D0081CFB0 /* NetworkServiceProtocol.swift in Sources */,
+				07C093C129B654A80081CFB0 /* Joke.swift in Sources */,
+				07C0939C29B64E510081CFB0 /* HTTPRequest.swift in Sources */,
 				070CCED1296641420070E588 /* OnboardingPage.swift in Sources */,
 				07DB7CC429677A0500F7E07F /* HeaderView.swift in Sources */,
 			);
@@ -504,6 +677,7 @@
 		};
 		07550437295CA8EF006D1977 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90E5838ECD8C03D0E6756634 /* Pods-Rndm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -533,6 +707,7 @@
 		};
 		07550438295CA8EF006D1977 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 121EC875F7DDA9490958CEAD /* Pods-Rndm.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

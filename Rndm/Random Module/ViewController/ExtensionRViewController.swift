@@ -26,8 +26,8 @@ extension RViewController: UICollectionViewDelegateFlowLayout, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let w: CGFloat = indexPath.section == 0 ? GConstants.largeCardWidth : GConstants.mediumCardWidth
-        let h: CGFloat = indexPath.section == 0 ? GConstants.largeCardHeight : GConstants.mediumCardHeight
+        let w: CGFloat = indexPath.section == 0 ? GConstants.largeCardWidth : GConstants.smallCardWidth
+        let h: CGFloat = indexPath.section == 0 ? GConstants.largeCardHeight : GConstants.smallCardHeight
         return CGSize(width: w, height: h)
     }
     
@@ -49,6 +49,8 @@ extension RViewController: UICollectionViewDelegateFlowLayout, UICollectionViewD
         } else {
             sectionStack.append(indexPath.section)
         }
+        
+//        print(indexPath)
         
         self.tabBarController?.navigationItem.title = RCardTitles.sectionTitles[sectionStack.first ?? 0]
     }

@@ -91,8 +91,8 @@ class CardCell: UICollectionViewCell, Glassmorphism, Colors, Fonts {
     }
     
     func setDesign(indexPath: IndexPath) {
-        let w: CGFloat = indexPath.section == 0 ? GConstants.largeCardWidth : GConstants.mediumCardWidth
-        let h: CGFloat = indexPath.section == 0 ? GConstants.largeCardHeight : GConstants.mediumCardHeight
+        let w: CGFloat = indexPath.section == 0 ? GConstants.largeCardWidth : GConstants.smallCardWidth
+        let h: CGFloat = indexPath.section == 0 ? GConstants.largeCardHeight : GConstants.smallCardHeight
         let size = CGSize(width: w, height: h)
         
         let blurEffect = UIBlurEffect(style: indexPath.section == 0 ? .systemUltraThinMaterialDark : .systemUltraThinMaterialLight)

@@ -31,6 +31,7 @@ class RViewController: UIViewController, Colors, Fonts {
     
     override func viewWillAppear(_ animated: Bool) { super.viewWillAppear(animated)
         setupNavStyle()
+//        print("Kotak")
     }
     
     
@@ -40,11 +41,12 @@ class RViewController: UIViewController, Colors, Fonts {
     }
     
     private func setupNavStyle() {
-        self.tabBarController?.navigationItem.title = "Title"
+//        self.tabBarController?.navigationItem.title = "Title"
         self.tabBarController?.navigationItem.hidesBackButton = true
         self.tabBarController?.navigationController?.isNavigationBarHidden = false
         self.tabBarController?.navigationController?.navigationBar.prefersLargeTitles = true
         self.tabBarController?.navigationController?.navigationBar.tintColor = accent
+        self.tabBarController?.navigationController?.navigationItem.largeTitleDisplayMode = .always
         
         let blurEffect = UIBlurEffect(style: .systemUltraThinMaterialDark)
         let largeTitleAttr = [
